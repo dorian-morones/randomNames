@@ -8,6 +8,7 @@ interface ButtonProps {
 }
 
 const Button: FunctionComponent<ButtonProps> = (props) => {
+
   return (
       <Btn>
         Random

@@ -1,9 +1,12 @@
 import React from 'react';
+import Button from './components/Button';
+import Display from './components/Display';
 
 function App() {
   return (
     <div>
-      Randome Names...
+      <Display />
+      <Button />
     </div>
   );
 }

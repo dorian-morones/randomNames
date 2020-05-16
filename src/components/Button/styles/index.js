@@ -5,5 +5,5 @@ export const Btn = styled.button`
   border: 0px;
   padding: 10px;
   font-weight: 600;
-  background-color: gold;
+  background-color: ${(props) => props.theme.color};
 `;

@@ -21,6 +21,9 @@ export const Item = styled.p`
   text-align: center;
   flex: 50%;
   background-color: ${(props) => props.theme.color};
+  margin: 10px;
+  padding: 3px;
+  height: 25px;
   &:hover{
     background-color: #c1c1c1;
   }

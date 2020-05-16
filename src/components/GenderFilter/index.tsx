@@ -1,10 +1,19 @@
 import React, { FunctionComponent, useState } from "react";
 import { Container, Row, Title, Item } from "./styles";
 
-interface GenderProps {}
+interface GenderProps {
+  getGender: any,
+}
 
 const GenderFilter: FunctionComponent<GenderProps> = (props: any) => {
-  const [selected, setSelected] = useState<string>("");
+
+  const { getGender } = props;
+  const [selected, setSelected] = useState<string>("Male");
+
+  const handleSelectCountry = (val:string) =>{
+    setSelected(val);
+    getGender('gender', val);
+  }
 
   return (
     <Container>
@@ -14,13 +23,13 @@ const GenderFilter: FunctionComponent<GenderProps> = (props: any) => {
       <Row>
         <Item
           theme={{ color: selected === "Male" ? "gainsboro" : "#fff" }}
-          onClick={() => setSelected("Male")}
+          onClick={() => handleSelectCountry("Male")}
         >
           Male
         </Item>
         <Item
           theme={{ color: selected === "Female" ? "gainsboro" : "#fff" }}
-          onClick={() => setSelected("Female")}
+          onClick={() => handleSelectCountry("Female")}
         >
           Female
         </Item>

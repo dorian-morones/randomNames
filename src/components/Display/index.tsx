@@ -5,13 +5,15 @@ import {
 } from './styles/';
 
 interface DisplayProps {
-
+  showName:string,
 }
 
 const Display: FunctionComponent<DisplayProps> = (props) => {
+  const {showName} = props;
+
   return (
       <Container>
-        <Text>Names</Text>
+        <Text>{showName !== '' ? showName : 'Set filters and click the button'}</Text>
       </Container>
   );
 };

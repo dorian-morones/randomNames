@@ -3,13 +3,18 @@ import CountryFilters from "../CountriesFilter";
 import GenderFilter from "../GenderFilter";
 import { Container, Col } from "./styles";
 
-interface HeaderProps {}
+interface HeaderProps {
+  country: any,
+  gender: any,
+}
 
 const Header: FunctionComponent<HeaderProps> = (props: any) => {
+  const { country, gender } = props;
+
   return (
     <Container>
-      <Col><CountryFilters /></Col>
-      <Col><GenderFilter /></Col>
+      <Col><CountryFilters getCountry={country}/></Col>
+      <Col><GenderFilter getGender={gender}/></Col>
     </Container>
   );
 };

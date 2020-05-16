@@ -4,13 +4,16 @@ import React, { FunctionComponent } from "react";
 import { getCountries } from "../../utils/getCountries";
 import { Container, Row, Title, Selecter } from "./styles";
 
-interface FiltersProps {}
+interface FiltersProps {
+  getCountry: any,
+}
 
 const CountryFilters: FunctionComponent<FiltersProps> = (props: any) => {
+  const {getCountry} = props;
   const Countries = getCountries();
 
   const handleSelect = (event:any) => {
-    console.log(event.target.value)
+    getCountry('country', event.target.value);
   };
 
   return (

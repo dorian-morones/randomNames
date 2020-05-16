@@ -2,7 +2,6 @@
 var info = require('../data/names.json');
 
 export const generateName = (data:any, gender:string) => {
-  console.log(data, gender)
   let val = gender;
   let names = data[0][val];
   let surName = data[0].surnames

@@ -20,7 +20,8 @@ export const Title = styled.p`
 export const Item = styled.p`
   text-align: center;
   flex: 50%;
+  background-color: ${(props) => props.theme.color};
   &:hover{
-    background-color: aqua;
+    background-color: #c1c1c1;
   }
 `;

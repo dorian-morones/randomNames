@@ -9,13 +9,17 @@ interface FiltersProps {}
 const CountryFilters: FunctionComponent<FiltersProps> = (props: any) => {
   const Countries = getCountries();
 
+  const handleSelect = (event:any) => {
+    console.log(event.target.value)
+  };
+
   return (
     <Container>
       <Row>
         <Title>Country</Title>
       </Row>
       <Row>
-        <Selecter>
+        <Selecter onChange={(event:any) => handleSelect(event)}>
           {Countries.map((item: any, index: number) => {
             return (
               <option key={index} value={item}>

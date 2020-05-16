@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import {
-  Container
+  Container,
+  Text
 } from './styles/';
 
 interface DisplayProps {
@@ -10,7 +11,7 @@ interface DisplayProps {
 const Display: FunctionComponent<DisplayProps> = (props) => {
   return (
       <Container>
-        Names
+        <Text>Names</Text>
       </Container>
   );
 };

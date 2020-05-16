@@ -5,5 +5,5 @@ export const Btn = styled.button`
   border: 0px;
   padding: 10px;
   font-weight: 600;
-  /* margin-bottom: ${(props) => props.theme.margin ? props.theme.margin : '0px'}; */
+  background-color: gold;
 `;

@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Button from "./components/Button";
 import Display from "./components/Display";
 import styled from "styled-components/macro";
-import { generateName } from "./utils/generateName";
+import { generateName, filteredData } from "./utils/generateName";
 
 export const Container = styled.div`
   width: 400px;
@@ -17,7 +17,7 @@ export const Container = styled.div`
 
 function App() {
   const [country, setCountry] = useState<string>("");
-  const [gender, setGender] = useState<string>("Male");
+  const [gender, setGender] = useState<string>("male");
   const [disable, setDisable] = useState<boolean>(true);
   const [name, setName] = useState<string>('');
 
@@ -28,10 +28,9 @@ function App() {
   };
 
   const randomName = () => {
-    console.log(country, gender);
-    const name = generateName(country, gender);
-    console.log(name);
-    setName(name);
+    let data = filteredData(country);
+    let fullName = generateName(data, gender);
+    setName(fullName);
   };
 
   return (

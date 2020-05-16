@@ -8,7 +8,7 @@ interface GenderProps {
 const GenderFilter: FunctionComponent<GenderProps> = (props: any) => {
 
   const { getGender } = props;
-  const [selected, setSelected] = useState<string>("Male");
+  const [selected, setSelected] = useState<string>("male");
 
   const handleSelectCountry = (val:string) =>{
     setSelected(val);
@@ -22,14 +22,14 @@ const GenderFilter: FunctionComponent<GenderProps> = (props: any) => {
       </Row>
       <Row>
         <Item
-          theme={{ color: selected === "Male" ? "gainsboro" : "#fff" }}
-          onClick={() => handleSelectCountry("Male")}
+          theme={{ color: selected === "male" ? "gainsboro" : "#fff" }}
+          onClick={() => handleSelectCountry("male")}
         >
           Male
         </Item>
         <Item
-          theme={{ color: selected === "Female" ? "gainsboro" : "#fff" }}
-          onClick={() => handleSelectCountry("Female")}
+          theme={{ color: selected === "female" ? "gainsboro" : "#fff" }}
+          onClick={() => handleSelectCountry("female")}
         >
           Female
         </Item>
